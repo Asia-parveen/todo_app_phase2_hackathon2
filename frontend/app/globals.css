@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 text-gray-900 min-h-screen;
+  }
+
+  /* Focus visible for keyboard navigation */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-purple-500;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  /* Container for centered content */
+  .container-app {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Form field spacing */
+  .form-field {
+    @apply space-y-1;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-purple-200 hover:-translate-y-0.5;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent;
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* Link styles */
+  .link {
+    @apply text-purple-600 hover:text-pink-600 underline underline-offset-2 transition-colors;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply badge bg-gradient-to-r from-green-100 to-emerald-100 text-green-800;
+  }
+
+  .badge-pending {
+    @apply badge bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800;
+  }
+}
